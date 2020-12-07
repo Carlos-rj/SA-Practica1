@@ -14,22 +14,16 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it(`Nombre del estudiante`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app.nombre).toEqual('Carlos Roberto Jimenez Perez');
   });
 
-  it(`should have as title 'Practica1'`, () => {
+  it(`Carnet del estudiante`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Practica1');
+    expect(app.carnet).toEqual(201504143);
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Practica1 app is running!');
-  });
 });
